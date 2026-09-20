@@ -86,38 +86,9 @@ The dataset is **not included in this repository** because of its size and licen
 # 4. Experimental Design
 
 The study follows an end-to-end segmentation workflow:
+<img width="1376" height="768" alt="Medical_image_segmentation_resea…_20260920200843" src="https://github.com/user-attachments/assets/b9b7970b-ee19-42b9-a549-204bc9e8d495" /><img width="1376" height="768" alt="U-Net_architecture_medical_image…_20260920201524" src="https://github.com/user-attachments/assets/8c3863c3-883b-4b44-b4db-c7b174182cc7" />
 
-```text
-BraTS MRI Volumes
-        │
-        ▼
-Multi-modal MRI Loading
-        │
-        ▼
-Preprocessing & Normalization
-        │
-        ├───────────────┐
-        │               │
-        ▼               ▼
-   2D Slice-Based    3D Volumetric
-     Pipeline          Pipeline
-        │               │
-        ▼               ▼
-   U-Net Family     U-Net Family
-        │               │
-        └───────┬───────┘
-                ▼
-         Model Training
-                │
-                ▼
-       Segmentation Prediction
-                │
-                ▼
-      Quantitative Evaluation
-                │
-                ▼
-     2D/3D Visualization
-```
+
 
 The notebooks implement different experimental configurations around this common workflow.
 
@@ -205,24 +176,8 @@ This distinction is important when interpreting and reproducing the reported res
 `Unet-2D.ipynb` establishes a slice-based U-Net baseline.
 
 The model follows the conventional encoder-decoder structure:
+<img width="1376" height="768" alt="U-Net_architecture_medical_image…_20260920201524" src="https://github.com/user-attachments/assets/77c3dd45-53ef-4bec-a1c4-09215da309b5" />
 
-```text
-MRI Slice
-   │
-   ▼
-Encoder
-   │
-   ├── Skip Connections
-   │
-   ▼
-Bottleneck
-   │
-   ▼
-Decoder
-   │
-   ▼
-Segmentation Mask
-```
 
 The purpose of this experiment is to establish a baseline for comparison with more sophisticated architectures.
 
