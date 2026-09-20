@@ -86,7 +86,6 @@ The dataset is **not included in this repository** because of its size and licen
 # 4. Experimental Design
 
 The study follows an end-to-end segmentation workflow:
-<img width="1376" height="768" alt="Medical_image_segmentation_resea…_20260920200843" src="https://github.com/user-attachments/assets/b9b7970b-ee19-42b9-a549-204bc9e8d495" /><img width="1376" height="768" alt="U-Net_architecture_medical_image…_20260920201524" src="https://github.com/user-attachments/assets/8c3863c3-883b-4b44-b4db-c7b174182cc7" />
 
 
 
