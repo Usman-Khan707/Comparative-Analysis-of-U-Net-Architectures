@@ -86,6 +86,7 @@ The dataset is **not included in this repository** because of its size and licen
 # 4. Experimental Design
 
 The study follows an end-to-end segmentation workflow:
+<img width="1376" height="768" alt="Medical_image_segmentation_resea…_20260920200843" src="https://github.com/user-attachments/assets/c6a51014-9cec-4564-a7c2-db2d9e479c83" />
 
 
 
@@ -195,25 +196,8 @@ The architecture incorporates:
 - U-Net-style skip connections
 
 Conceptually:
+<img width="1376" height="768" alt="Attention_residual_U-Net_block_d…_20260920201914" src="https://github.com/user-attachments/assets/d2312062-5cf7-42b4-b876-bbde5e8afbcd" />
 
-```text
-4-Channel MRI
-      │
-      ▼
-Feature Extraction + Attention
-      │
-      ▼
-Residual Encoder
-      │
-      ▼
-ASPP / Multi-scale Bottleneck
-      │
-      ▼
-Attention Decoder
-      │
-      ▼
-Segmentation Mask
-```
 
 This experiment investigates whether improved feature representation and selective attention can provide advantages over a conventional U-Net.
 
@@ -243,6 +227,7 @@ The architecture uses:
 - 3D pooling
 - Volumetric decoder layers
 - U-Net skip connections
+<img width="1376" height="768" alt="Schematic_of_3D_U-Net_architecture_20260920202044" src="https://github.com/user-attachments/assets/e1050087-63b0-4928-86ec-06513269ec2a" />
 
 The main motivation is to preserve spatial relationships between adjacent MRI slices that are lost when treating each slice independently.
 
@@ -278,6 +263,7 @@ The notebook also includes an **Optuna-based hyperparameter search** exploring p
 - Number of base channels
 - Gradient accumulation
 - Number of training epochs
+<img width="1376" height="768" alt="Schematic_of_3D_attention_U-Net_20260920202142" src="https://github.com/user-attachments/assets/637144ab-894b-4f48-8c77-f78d3a73f130" />
 
 The recorded notebook contains the architecture and optimization framework, but does not contain a complete final evaluation comparable to the completed 3D U-Net and 3D ResUNet experiments. Therefore, no final benchmark score is reported for this experiment.
 
